@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div id="app"></div>
+
+  <script>
+    const data = [
+      {
+        "name": "3",
+        "author": "3",
+        "img": "https://raw.githubusercontent.com/musico-server/files/refs/heads/main/images/TRy2HihBMB0esvX.png?ts=1780852709261",
+        "audio": "https://raw.githubusercontent.com/musico-server/files/refs/heads/main/audio/TRy2HihBMB0esvX.opus?ts=1780852709261",
+        "id": "1gkqPybdO46J5jv"
+      }
+    ];
+
+    const container = document.getElementById("app");
+
+    data.forEach(item => {
+      const block = document.createElement("div");
+
+      const title = document.createElement("h3");
+      title.textContent = item.name;
+
+      const author = document.createElement("p");
+      author.textContent = item.author;
+
+      const img = document.createElement("img");
+      img.src = item.img;
+      img.width = 200;
+
+      const audio = document.createElement("audio");
+      audio.controls = true;
+      audio.src = item.audio;
+
+      const id = document.createElement("id");
+      title.textContent = item.id;
+
+      block.appendChild(title);
+      block.appendChild(author);
+      block.appendChild(img);
+      block.appendChild(audio);
+      block.appendChild(id);
+
+      container.appendChild(block);
+    });
+  </script>
+</body>
+</html>
